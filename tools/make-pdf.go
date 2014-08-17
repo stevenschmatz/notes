@@ -16,7 +16,7 @@ func main() {
 	}
 
 	subjectName := os.Args[1]
-	filename := getFilenameWithoutExtension(os.Args[2]) + ".md"
+	filename := getFilenameWithoutExtension(os.Args[2])
 
 	// Change directory and check that folder and file exist.
 	err := os.Chdir("../src/" + subjectName)
@@ -31,7 +31,7 @@ func main() {
 	// Execute command
 	cmd := exec.Command("pandoc",
 		"--latex-engine=xelatex",
-		"-s", filename,
+		"-s", filename+".md",
 		"-o", "../../pdf/"+subjectName+"/"+filename+".pdf")
 
 	cmd.Stdout = os.Stdout
