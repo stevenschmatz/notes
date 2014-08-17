@@ -23,7 +23,7 @@ func main() {
 	if err != nil {
 		fmt.Printf("ERROR: There is no folder named '%s'.\n", subjectName)
 		return
-	} else if _, err := os.Stat(filename); os.IsNotExist(err) {
+	} else if _, err := os.Stat(filename + ".md"); os.IsNotExist(err) {
 		fmt.Printf("ERROR: There is no file '%s' in folder '%s'.\n", filename, subjectName)
 		return
 	}

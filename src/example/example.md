@@ -61,8 +61,11 @@ for i in range(10):
     print i
 ~~~
 
-
-
+~~~golang
+func main() {
+  return 0
+}
+~~~
 ### An h3 header ###
 
 Now a nested list:
