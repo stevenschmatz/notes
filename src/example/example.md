@@ -24,7 +24,6 @@ in chapters 12--14"). Three dots ... will be converted to an ellipsis.
 Unicode is supported. ☺
 
 
-
 An h2 header
 ------------
 
@@ -61,11 +60,6 @@ for i in range(10):
     print i
 ~~~
 
-~~~golang
-func main() {
-  return 0
-}
-~~~
 ### An h3 header ###
 
 Now a nested list:
