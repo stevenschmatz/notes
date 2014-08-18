@@ -73,3 +73,5 @@ $$V = \text{span}(S) | S \text{ is linearly independent.}$$
 In this case, $S$ is a basis for $V$.
 
 A basis can be thought of a "minimum" set of vectors that spans the subspace.
+
+Hence, the unit vectors $\hat{\textbf{i}} = (1, 0)$ and $\hat{\textbf{j}} = (0, 1)$ provide a basis for cartesian coordinates, because they span $\textbf{R}^2$ and they are linearly independent.
