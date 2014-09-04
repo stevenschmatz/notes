@@ -8,15 +8,15 @@
 <!---Content goes here-->
 
 Chapter 1: The Foundations: Logic and Proofs
-======
+============================================
 
 * A *proof* is a correct mathematical argument.
 * A *theorem* is a mathematical statement that is proven to be true.
 
 1.1: Propositional Logic
--------
+------------------------
 
-## Propositions
+### Propositions
 
 Logic gives us rules to distinguish between valida nd invalid mathematical arguments. A *proposition* is a declarative sentence that is either true or false, but not both. *Propositional variables* are variables that represent propositions, such as $p, q, r, s \dots$, just as letters are used to denote numerical variables.
 
@@ -70,3 +70,54 @@ To correctly interpret these statements, one needs the order of precedence.
 ### Logic and binary operations
 
 A *bit*, or "binary digit", is a value which may either be 0 or 1. A variable that stores a bit is known as a *boolean variable*. All of the logical operators can be applied to Boolean variables.
+
+***
+
+1.2: Applications of propositional logic
+----------------------------------------
+
+Logic has many important applications to sciences and mathematics:
+
+* Design of artificial intelligence
+* Design of electrical circuits and programming languages
+* Verifying correctness of programs
+* Automated theorem proving
+
+### Translating English sentences
+
+English is an ambiguous language. To resolve these ambiguities, we can translate English into logic (using assumptions).
+
+$$\text{"You cannot ride the roller coaster if you are under 4 feet tall unless you are older than 16 years old."}$$
+$$(r \land s) \rightarrow \neg q$$
+
+### System specifications
+
+In the translation from natural language to logic and vice versa, it is important that there is no contradiction evident in multiple statements. For example, 
+
+"The diagnostic message is stored in the buffer or it is retransmitted."
+"The diagnostic message is not stored in the buffer."
+"If the diagnostic message is stored in the buffer, then it is retransmitted."
+
+We can call $p$ the situation where “the diagnostic message is stored in the buffer” is true, and $q$ where the situation “the diagnostic message is retransmitted” is true. From this, we can infer that $p \bigvee q, \neg p, p \rightarrow q$.
+
+Also logic puzzles and logic circuits.
+
+1.3: Propositional Equivalences
+===============================
+
+Often, in mathematical arguments, mathematicians replace compound propositions with other compound propositions with equivalent truth values. A *tautology* is a compound proposition that is always true, no matter what the truth values of the propositional variables that compose the statement. On the other hand, a *contradiction* is a statement that is unconditionally false. A compound proposition that is neither a tautology nor a contradiction is a *contingency*.
+
+### Logical equivalence
+
+If two statements have the same truth value in all statements, they are said to be *logically equivalent*. This is only true when $p \leftrightarrow q = \top$. The notation $p \equiv q$ is used to represent logical equivalence.
+
+The *De Morgan laws* state:
+
+$$\neg(p \land q) \equiv \neg p \lor \neg q$$
+$$\neg(p \lor q) \equiv \neg p \land \neg q$$
+
+The De Morgan laws tell us how to negate compound statements. There are many laws governing compound propositions. Another law is the associative law – with logical conjunctions or disjunctions, there is no distinction between ordering operations.
+
+### Propositional satisfiability
+
+A compound proposition is *satisfiable* if there is an assignment of truth values that makes it true. If there is no assignment of truth values that makes a compound proposition satisfiable, then the compound proposition is said to be *unsatisfiable*.
